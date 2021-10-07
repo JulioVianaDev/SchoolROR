@@ -1,0 +1,15 @@
+<div class="alert alert-primary ">
+  <p>
+    <%= @tweet.user.email %>
+  </p>
+
+  <p>
+    <strong>Conteudo:</strong>
+    <%= @tweet.conteudo %>
+  </p>
+ <%if @tweet.user == current_user %>
+    <td><%= link_to 'Editar', edit_tweet_path(@tweet), class: "btn btn-primary btn-sm"%></td>
+    <td><%= link_to 'Apagar', @tweet, method: :delete, data: { confirm: 'Tem Certeza?' }, class: "btn btn-danger btn-sm"%></td>
+  <% end %> 
+  <%= link_to 'Voltar', tweets_path,class: "btn btn-info btn-sm" %>
+</div>

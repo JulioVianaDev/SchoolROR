@@ -1,0 +1,14 @@
+<div class="alert alert-primary" role="alert" >
+    <h1 class="display-3"> Bem-vindo</h1>
+    <% if user_signed_in? %>
+        <p class="lead"> bora programar? </p> 
+        <p> Você está logado</p>
+    <%else %>
+        <p> Você está deslogado </p>
+    <%end %>
+    <hr class="my-4">
+    <p> conteudo do container</p>
+    <p class="lead">
+        <%= link_to "Cadastrar",new_user_registration_path,class: "btn btn-primary btn-lg" %>
+    </p>
+</div>
